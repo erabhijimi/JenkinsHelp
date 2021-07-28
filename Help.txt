@@ -111,5 +111,33 @@ $
 sudo cp ~/.ssh/known_hosts /var/lib/jenkins/.ssh
 ------------------------------------------------------------------------------------------------------------Register Worker node in Jenkins UI
 Manage jenkins-->manage cloud-->admin/admin-->new Node-->(Register the slave node)MyWorkerNode-->OK-->/home/abhijimi(Build will run here)-->Labels(MyWorkerNode)-->
-Launch via ssh-->(Worker Ip addr)172-31-35-197-->
-Credentials-->Add-->Jenkins-->SSh username with private key-->
+Launch via ssh-->(Worker Ip addr)172.31.35.197-->
+Credentials-->Add-->Jenkins-->SSh username with private key-->copy the cirt from master at@ cat ~/.ssh/id_rsa	add it-->
+select the one u have created and next "manually trusted key verification strategy" and save it.
+==============================================================================================================Setup EKS() cluster in AWS::https://www.coachdevops.com/2020/10/create-eks-cluster-by-eksctl-how-to.html
+Install the AWS CLI version 2
+open powershell as admin,
+choco install eksctl
+choco install kubernetes-cli
+aws configure:
+
+---------------------------------------------------------------------------------------------https://www.cidevops.com/2020/12/deploy-springboot-docker-app-into.html
+manage jenkins-->manage plugins-->available-->Docker,Docker Pipeline,k8 Continious deploy ,
+configure eks cluster.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Create the jenkins pipeline,
+
+
+1.Create cred for dockerhub:
+add new->username/password/dockerhub(ID)
+2.configure kubectl as well!!!!!!!!!!!!!!!!!!!!!!
+3.Create the Jenkins Pipeline,
+	1.Create a new pipeline job.
+	2.Go to pipeline tab
+		a. checkout code
+		b. Build code 
+		c. Build and push image to docker hub
+		
+4.Create Maven3 variable under Global tool configuration in Jenkins
+
+
+
