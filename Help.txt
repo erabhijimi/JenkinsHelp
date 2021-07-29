@@ -139,5 +139,18 @@ add new->username/password/dockerhub(ID)
 		
 4.Create Maven3 variable under Global tool configuration in Jenkins
 
+==========================================================================================Install Docker on Ubuntu 
+apt install gnupg2		//gnupg2 is tool for secure communication and data storage. It can be used to encrypt data and to create digital signatures
+apt install docker.io
+systemctl enable --now docker		// Active: active (running)
+systemctl status docker
+docker run hello-world				//To test if docker installed properly 
+sudo usermod -aG docker $USER
+sudo newgrp docker
+systemctl restart jenkins
+
+//can be another way
+apt-get install acl
+sudo setfacl --modify user:abhijitmishra2632:rw /var/run/docker.sock
 
 
