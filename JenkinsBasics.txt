@@ -1,0 +1,11 @@
+1.Getting Started
+	Jenkins default port is 8080
+	Download the stable war file from https://www.jenkins.io/download/
+2.Setup Jenkins on Tomcat
+	Download tomcat zip file. extract it and place the war in webapps folder.
+	go to /bin
+	startup
+	password : ed39f695626f4f0894aabd17d540ac6c
+3.Change Home Directory
+	.jenkins folder		//all info about job's
+	//for disk space
